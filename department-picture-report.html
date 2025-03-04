@@ -315,7 +315,7 @@
                           <label for="designation">Designation:</label>
                           <input type="text" id="designation" required><br><br>
                           <label for="image">Upload Image:</label>
-                          <input type="file" id="image" accept="image/*" required><br><br>
+                          <input type="file" id="imageUpload" accept="image/*" required><br><br>
                           <button type="submit">Upload Image</button>
                         </form>
                       </div>
@@ -433,44 +433,21 @@
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const sanitizeInput = (input) => {
-        if (typeof input !== "string") return input;
-        input = input.trim();
-        input = input.replace(/<[^>]*>/g, "");
-        input = input.replace(/(javascript:|data:|vbscript:)/gi, "");
-        input = input.replace(/on\w+="[^"]*"/gi, "");
-        input = input.replace(/[^a-zA-Z0-9\s.,\-']/g, "");
-        return input;
-      };
-
-      $(document).ready(function () {
-        function restrictInput(selector, regex) {
-          $(selector).on('input', function () {
-            let sanitizedValue = $(this).val().replace(regex, '');
-            $(this).val(sanitizedValue);
-          });
-        }
-        restrictInput('#name, #department, #designation', /[^a-zA-Z0-9\s.\-']/g);
-        $('#name, #department, #designation').attr('maxlength', '50');
-      });
-
       const imageUploadForm = document.getElementById('image-upload-form');
 
       imageUploadForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-
-
         const token = localStorage.getItem('token');
-        const name = sanitizeInput(document.getElementById('name').value);
-        const department = sanitizeInput(document.getElementById('department').value);
-        const designation = sanitizeInput(document.getElementById('designation').value);
-        const imageFile = document.getElementById('image').files[0];
+        const name = document.getElementById('name').value;
+        const department = document.getElementById('department').value;
+        const designation = document.getElementById('designation').value;
+        const imageFile = document.getElementById('imageUpload').files[0];
 
-        if (!imageFile || !imageFile.type.startsWith('image/')) {
-          alert('Please upload a valid image file.');
-          return;
-        }
+        // if (!imageFile || !imageFile.type.startsWith('image/')) {
+        //   alert('Please upload a valid image file.');
+        //   return;
+        // }
 
         const formData = new FormData();
         formData.append('name', name);
@@ -510,6 +487,17 @@
   <!-- navbar -->
   <script>
     $(document).ready(function () {
+      $('#imageUpload').on('change', function (event) {
+        debugger;
+        const file = event.target.files[0];
+        const fileName = file.name;
+        const allowedExtensions = /(\.jpg|\.jpeg|\.pdf|\.doc|\.docx|\.xlsx|\.png)$/i;
+        if (!allowedExtensions.test(fileName) || fileName.split('.').length !== 2) {
+          alert('Invalid file type. Only .jpg, .jpeg, .pdf, .doc, .docx, .xlsx files are allowed.');
+          $(this).val('');
+          return;
+        }
+      });
       // Toggle dropdown on click
       $('.a-MenuBar-item > .a-MenuBar-label').on('click', function (e) {
         e.preventDefault();

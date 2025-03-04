@@ -132,24 +132,25 @@
       height: 450px;
     }
   </style>
-  <style>
+  <<<<<<< HEAD=======<style>
     #passwordError {
-      color: red;
-      font-size: 14px;
-      display: none;
+    color: red;
+    font-size: 14px;
+    display: none;
     }
 
     #signin-btn {
-      opacity: 0.6;
-      cursor: not-allowed;
+    opacity: 0.6;
+    cursor: not-allowed;
     }
-  </style>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="-1" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
-  <link rel="stylesheet" href="r/wstnapex/173/files/static/v1359/Helvetica.ttf">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </style>
+    >>>>>>> 8a51a13188f806d94cc1d62925a338ec8a00da18
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="r/wstnapex/173/files/static/v1359/Helvetica.ttf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body
@@ -464,9 +465,6 @@
             <div class="creds">
               <label class="form-label" for="password">Password</label>
               <input type="password" id="password" placeholder="Password" class="creds form-control" required><br><br>
-              <small id="passwordError">Password must be at least 8 characters, contain uppercase, lowercase, a
-                number, and a special character.</small>
-
             </div>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             <button class="btn btn-danger" type="submit" id="signin-btn">Create</button>
@@ -789,19 +787,32 @@
       });
 
       // Update button functionality
-      $('#updateBtn').on('click', async function () {
+      $('#uploadPDF').on('change', function (event) {
+        const file = event.target.files[0];
+        const fileName = file.name;
+        const allowedExtensions = /(\.jpg|\.jpeg|\.pdf|\.doc|\.docx|\.xlsx|\.png)$/i;
+        if (!allowedExtensions.test(fileName) || fileName.split('.').length !== 2) {
+          alert('Invalid file type. Only .jpg, .jpeg, .pdf, .doc, .docx, .xlsx files are allowed.');
+          $(this).val('');
+          return;
+        }
+      });
+      $('#updateBtn').on('click', async function (event) {
+        debugger;
         var userId = selectedRow.data('id');
         var token = localStorage.getItem('token');
         var formData = new FormData();
-
-        // Get the uploaded file
         var file = $('#uploadPDF')[0].files[0];
-        if (file) {
-          formData.append('pdf', file);
-        } else {
-          alert('Please upload a PDF file before updating.');
-          return;
-        }
+        //const fileName = file.name;
+        formData.append('FileName', file);
+        // Get the uploaded file
+        // var file = $('#uploadPDF')[0].files[0];
+        // if (file) {
+        //   formData.append('pdf', file);
+        // } else {
+        //   alert('Please upload a PDF file before updating.');
+        //   return;
+        // }
 
         try {
           const response = await fetch(`http://192.168.5.247:2208/tnapex/editcareer/${userId}`, {
@@ -882,81 +893,49 @@
     });
   </script>
   <script>
-
+    // This forces a page reload when navigating back
     if (window.history && window.history.pushState) {
       window.history.pushState(null, null, window.location.href);
       window.onpopstate = function () {
-        window.history.go(1);
+        window.history.go(1); // This prevents navigating back to the login page
       };
     }
 
   </script>
+  <!-- new user -->
   <script>
-    function validatePassword(password) {
-      const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-      return passwordPattern.test(password);
-    }
 
-    $(document).ready(function () {
-      $('#password').on('keyup', function () {
-        const isValid = validatePassword($(this).val());
-        if (isValid) {
-          $('#passwordError').hide();
-          $('#signin-btn').prop('disabled', false).css({ opacity: 1, cursor: "pointer" });
-        } else {
-          $('#passwordError').show();
-          $('#signin-btn').prop('disabled', true).css({ opacity: 0.6, cursor: "not-allowed" });
-        }
-      });
-      $('#loginForm').on('submit', function (e) {
-        const password = $('#password').val();
-        if (!validatePassword(password)) {
-          alert('Error: Password does not meet the required criteria.');
-          return false;
-        }
-      });
-    });
+    const loginForm = document.getElementById('new-login-form');
 
-
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
 
-      let username = sanitizeInput(document.getElementById('username').value);
-      let password = document.getElementById('password').value;
+      const response = await fetch('http://192.168.5.247:2208/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
 
-      // Check if password is valid
-      if (!validatePassword(password)) {
-        alert("Password does not meet security requirements.");
-        return;
-      }
+      // Check if the response was successful (status code 200-299)
+      if (response.ok) {
+        alert('User created successfully!');
+        loginForm.reset(); // Reset form fields
 
-      try {
-        const response = await fetch('http://192.168.5.247:2208/auth/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password })
-        });
-
-        if (response.ok) {
-          alert('User created successfully!');
-          loginForm.reset();
-
-          // Show success modal
-          const modalElement = document.getElementById('new-user');
-          const modalInstance = new bootstrap.Modal(modalElement);
-          modalInstance.show();
-        } else {
-          const errorText = await response.text();
-          alert(`New user creation failed: ${errorText}`);
-          console.error('Error:', response.status, errorText);
-        }
-      } catch (error) {
-        alert("An error occurred. Please try again.");
-        console.error('Request Error:', error);
+        // Close the Bootstrap modal
+        const modalElement = document.getElementById('new-user'); // Replace with your modal's actual ID
+        const modalInstance = bootstrap.Modal.getInstance(modalElement); // Get the instance of the modal
+        modalInstance.hide(); // Close the modal
+      } else {
+        alert('New user creation failed. Please try again.');
+        console.error('Error:', response.statusText);
       }
     });
+
 
   </script>
+  <!-- new user -->
   <script>
     AOS.init();
   </script>
