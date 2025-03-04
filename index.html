@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html class="no-js  page-1 app-TNAPEX173136" lang="en" >
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/Core.min.css">
+
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/theme-core.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/Theme-Standard.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-apex.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/Core_one.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/Vita.min.css"> -->
+    <link rel="apple-touch-icon" href="assets/img/app-icon-192.png" />
+    <link rel="icon" href="assets/img/app-icon-32.png" />
+    <style type="text/css">
+      .form-switch .form-check-input {
+        visibility: hidden !important;
+      }
+      .top-bg h3 {
+      font-size: 1.25rem;
+      margin-block-end: .75rem;
+      line-height: 1.5;
+      font-weight: var(--a-base-font-weight-semibold, 500);
+      text-align: center;
+    }
+    </style>
+    <style type="text/css">
+
+      .carousel-control-next-icon {
+    background-color: grey; /* Set background to grey */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); /* Set icon color to white */
+    background-size: 100%; /* Ensure the icon fits the container */
+    background-repeat: no-repeat;
+    width: 25px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    border-radius: 4px; /* Optional: Make it a circle */
+        position: absolute;
+    right: -4rem;
+}
+.carousel-control-prev-icon {
+    background-color: grey; /* Set background to grey */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); /* Set arrow pointing left */
+    background-size: 100%; /* Ensure the icon fits the container */
+    background-repeat: no-repeat;
+    width: 25px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    border-radius: 4px; /* Optional: Make it a circle */
+        position: absolute;
+    left: -4rem;
+}
+
+
+
+
+      @font-face {
+      font-family: 'FontApex';
+      src: url('../font/apex-5-icon-font.woff2') format('woff2'),
+      url('../font/apex-5-icon-font.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;  
+      } 
+      @font-face { 
+      font-family: 'Font-APEX';
+      src: url('../fonts/Font-APEX-Small.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Small.woff') format('woff'),
+      url('../fonts/Font-APEX-Large.woff2') format('woff2'),
+      url('../fonts/Font-APEX-Large.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      } 
+      @media (min-width: 320px) {
+        .t-Region--carousel .carousel_image { 
+          margin: 0px auto !important;
+          display: flex;
+        } 
+      }
+    </style>
+    <style type="text/css">
+      /* body{
+      zoom:95% !important;
+      } */
+      .a-CardView-items--grid {
+      grid-template-rows: repeat(auto-fill, minmax(var(--a-cv-item-width, 180px), 1fr)) !important;
+      }
+      .a-CardView-items {
+      grid-gap: var(--a-cv-grid-gap, 16px);
+      -webkit-padding-after: var(--a-cv-grid-gap, 16px);
+      grid-template-columns: 1fr;
+      padding-block-end: var(--a-cv-grid-gap, 16px);
+      }
+      .a-CardView-media--fit .a-CardView-mediaImg {
+      object-fit: cover;
+      }
+      #marqueeContainer {
+      width: 100%;
+      overflow: hidden;
+      }
+      #marqueeList {
+      list-style: none;
+      white-space: nowrap;
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+      }
+      #marqueeList li {
+      display: inline;
+      }
+      @keyframes marquee {
+      0% {
+      transform: translateY(100%);
+      }
+      100% {
+      transform: translateY(-100%);
+      }
+      }
+      .marquee-scroll{
+      white-space: nowrap;
+      overflow: hidden;
+      animation: scrollUp 10s linear infinite;
+      }
+      @keyframes scrollUp {
+      0% {
+      transform: translateX(100%);
+      }
+      100% {
+      transform: translateX(-100%);
+      }
+      }
+      .marquee-scroll:hover {
+      animation-play-state: paused;
+      }
+      /* 
+      .a-Region-carouselItems {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 55px !important;
+      }
+      .a-CardView-media--background {
+      border-radius: var(--a-cv-border-radius);
+      bottom: 0;
+      display: unset;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 20px !important;
+      } */
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="r/wstnapex/136/files/static/v1410/Helvetica.ttf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita"   id="t_PageBody">
+    <!-- <a href="#main" id="t_Body_skipToContent">Skip to Main Content</a> -->
+    <!-- <video id="backgroundVideo" autoplay muted loop>
+      <source src="r/wstnapex/136/files/static/v1410/bg_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var video = document.getElementById('backgroundVideo');
+          video.playbackRate = 1;
+      });
+      </script> -->
+    <!-- <img class="bg-img" src="r/wstnapex/136/files/static/v1410/bg-img.jpg"> -->
+    <form role="none" action="wwv_flow.accept?p_context=tnapex173136/home/16192258202907" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
+      <input type="hidden" name="p_flow_id" value="136" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="16192258202907" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="37423971272412012936564377855204616075" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="tnapex173136&#x2F;home&#x2F;16192258202907" id="pContext" /><input type="hidden" value="37423971272412012936564377855204616075" id="pSalt" />
+      <header class="t-Header" id="t_Header" role="banner">
+        <div class="t-Header-branding">
+          <div class="t-Header-controls">
+            <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+          </div>
+          <div class="t-Header-logo">
+            <!-- <a href="&#x2F;ords&#x2F;r&#x2F;wstnapex&#x2F;tnapex173136&#x2F;home" class="t-Header-logo-link"><span class="apex-logo-text">TNAPEx</span></a> -->
+            <div class="gigw">
+              <li><a class="btn-decrease"><span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="font size Decrease"><i></i> A -</a></li>
+              <li><a class="btn-orig"><span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Reset font"><i></i> A </a></li>
+              <li><a class="btn-increase"><span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="font size Increase"><i></i> A +</a></li>
+              <li><a><span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Dark Mode"><i class="t-Icon fa fa-moon-o" id="darkmode"></i></a></li>
+              <li><a class="form-check form-switch"><label class="form-check-label" for="screenReaderSwitch">
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Screen Reader">
+                <i id="sound" class="t-Icon fa fa-volume-up"></i></label><input class="form-check-input"type="checkbox" role="switch" id="screenReaderSwitch" onclick="readText(document.getElementsByTagName('body')[0])" /></span></a>
+              </li>
+            </div>
+          </div>
+          <div class="t-Header-navBar">
+            <div class="t-Header-navBar--start"></div>
+            <div class="t-Header-navBar--center">
+              <ul class="t-NavigationBar " id="145325859119841098">
+                <li class="t-NavigationBar-item ">
+                  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#" title="" target="">
+                  <span class="t-Icon " aria-hidden="true" ></span><span class="t-Button-label"></span><span class="t-Button-badge"></span>
+                  </a>
+                </li>
+                <li class="t-NavigationBar-item ">
+                  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="login.html" title="" target="">
+                  <span class="t-Icon fa&#x20;fa-user-circle" aria-hidden="true" ></span><span class="t-Button-label">Sign In</span><span class="t-Button-badge"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="t-Header-navBar--end"></div>
+          </div>
+        </div>
+        <div class="top">
+          <div class="top-bg">
+            <img id="leftlogo" src= "https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/logo.png">           
+            <h1 class="dept-name text-middle">Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)</h1>
+            <h3 class="dept2-name text-middle">தமிழ்நாடு உணவு பதப்படுத்துதல் மற்றும் வேளாண் ஏற்றுமதி மேம்பாட்டு கழகம்</h3>
+            <img id="rightlogo" src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/tnlogo.png">
+          </div>
+        </div>
+        <div class="t-Header-nav">
+          <div class="t-Header-nav-list js-tabLike js-tabLike" id="t_MenuNav">
+            <ul>
+              <li class="a-MenuBar-item a-Menu--current" data-current="true" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-home">
+                <a class="a-MenuBar-label" href="index.html" title="" target="">Home</a>
+                <ul style="display: none">
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="index.html#about" title="" target="">About Us</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="index.html#Objectives" title="" target="">Objectives</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="organogrambcd8.html" title="" target="">Organogram</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="board-membersbcd8.html" title="" target="">Board Members</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="tnapex-employeesbcd8.html" title="" target="">TNAPEx Officials</a></li>
+                </ul>
+              </li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="">
+                <a class="a-MenuBar-label" href="#" title="" target="">Ongoing Schemes</a>
+                <ul style="display: none">
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="pmfmebcd8.html" title="" target="">PMFME</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="moringa-export-zonebcd8.html" title="" target="">Moringa Export Zone</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="agro-industrialbcd8.html" title="" target="">TN - Agro Industrial Corridor</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="rampbcd8.html" title="" target="">RAMP - Transformation of Food Processing Sector</a></li>
+                  <li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a href="theni-banana-clusterbcd8.html" title="" target="">Cluster Development Program</a></li>
+                </ul>
+              </li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a class="a-MenuBar-label" href="mapbcd8.html" title="" target="">Infrastructures</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-arrow-circle-o-right&#x20;fa-anim-flash"><a class="a-MenuBar-label" href="tamil-nadu-food-processing-policy-2018bcd8.html" title="" target="">Tamil Nadu Food Processing Policy, 2018</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a class="a-MenuBar-label" href="proposed-outreach-programsbcd8.html" title="" target="">Upcoming Events</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-file-o"><a class="a-MenuBar-label" href="useful-linksbcd8.html" title="" target="">Useful Links</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-file-o"><a class="a-MenuBar-label" href="32-event-detailsbcd8.html" title="" target="">Events Organized</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a class="a-MenuBar-label" href="careersbcd8.html" title="" target="">Careers</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a class="a-MenuBar-label" href="#" title="" target="">Tenders</a></li>
+              <li class="a-MenuBar-item" data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon=""><a class="a-MenuBar-label" href="contact-usbcd8.html" title="" target="">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </header>
+      <div class="t-Body">
+        <div class="t-Body-main">
+          <div class="t-Body-title" id="t_Body_title"></div>
+          <div class="t-Body-content" id="t_Body_content">
+            <main id="main" class="t-Body-mainContent">
+              <span id="APEX_SUCCESS_MESSAGE" data-template-id="166211644007098735_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="166211644007098735_E" class="apex-page-error u-hidden"></span>
+              <div class="t-Body-fullContent">
+                <div class="container">
+                  <div class="row ">
+                    <!-- <div class="col col-12 apex-col-auto col-start col-end" >
+                      <div class="t-Region t-Region--carousel t-Region--showCarouselControls js-cycle5s t-Region--carouselSlide i-h480 t-Region--removeHeader t-Region--hiddenOverflow t-Form--noPadding" id="R202078430800513696"  role="region" aria-label="New" >
+                        <div class="t-Region-header">
+                          <div class="t-Region-headerItems t-Region-headerItems--title">
+                            <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                            <h2 class="t-Region-title" id="R202078430800513696_heading" data-apex-heading>New</h2>
+                          </div>
+                          <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                        </div>
+                        <div role="region" aria-label="New" class="t-Region-bodyWrap">
+                          <div class="t-Region-buttons t-Region-buttons--top">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                          <div class="t-Region-body">
+                            <div class="t-Region-carouselRegions">
+                              <div data-label="New" id="SR_R202078629672513698">
+                                <div class="t-CardsRegion u-colors" id="R202078629672513698"  role="region" aria-label="New" >
+                                  <div class="t-Region-orderBy"></div>
+                                  <div id="R202078629672513698_Cards" class="a-TMV--cards">
+                                    <ul class="a-CardView-items a-CardView-items--grid is-placeholder" aria-hidden="true">
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <script type="text/javascript">
+                                    var gCard202078629672513698data = {
+                                    "values":[
+                                    [
+                                    "13"
+                                    ,null
+                                    ,"\/ords\/r\/wstnapex\/tnapex173136\/home?request=NATIVE%3DUkVHSU9OIFRZUEV-fjIwMjA3ODYyOTY3MjUxMzY5OA%2FIwiS70OkksnVLSYtb_d-_gurmNuz2hJGYRlgXfRo0ua06miFnpHLL6fW3Qf-DqXB5Kz_L0lvnbCztWt2TzvRsQ\u0026session=16192258202907\u0026x01=eyJQSUNfSUQiOiIxMyIsImFwZXgkYXR0ciRpbWFnZSR0eXBlIjoiTUVESUEifQ%2FWzAZb_Ep970i6rZ_HUTvCqBlJpwMxd1Z3uLw1AH1eG76HYXAW5cdu5mq3AIvIUepstFLRdg2-T1HgkMCyVlfvA\u0026cs=3-7aSMK8jiKdd8tIdj6nFZ_P1urM98T3S9D4KVipp2Fg1lh5NhTiXqHQqbEgOcJHQMjAYD4UjhUJrCY0tNkqvlg"
+                                    ,"N"
+                                    ,"N"
+                                    ,"N"
+                                    ]
+                                    ]
+                                    ,"firstRow":1
+                                    ,"moreData":false
+                                    }
+                                    ;
+                                  </script>
+                                </div>
+                              </div>
+                              <div data-label="New" id="SR_R202079220416513704">
+                                <div class="t-CardsRegion u-colors" id="R202079220416513704"  role="region" aria-label="New" >
+                                  <div class="t-Region-orderBy"></div>
+                                  <div id="R202079220416513704_Cards" class="a-TMV--cards">
+                                    <ul class="a-CardView-items a-CardView-items--grid is-placeholder" aria-hidden="true">
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <script type="text/javascript">
+                                    var gCard202079220416513704data = {
+                                    "values":[
+                                    [
+                                    "14"
+                                    ,null
+                                    ,"\/ords\/r\/wstnapex\/tnapex173136\/home?request=NATIVE%3DUkVHSU9OIFRZUEV-fjIwMjA3OTIyMDQxNjUxMzcwNA%2FfHjJNSlgRGoyAxZCFHXvUwC_grw-h81Eh9gX1E_2JaX0dZhP52eOl0z1spqmjF-gFkMURLFqySMznaSvCqWQdQ\u0026session=16192258202907\u0026x01=eyJQSUNfSUQiOiIxNCIsImFwZXgkYXR0ciRpbWFnZSR0eXBlIjoiTUVESUEifQ%2F_kXAgQXVeHuZt6vix8TuGL7kRRIL73sap_B0AH9ajN0SBQ7qv4BGz9xAb5DzWvQKYI5gxAkkf_u6QQWD5NgG7g\u0026cs=3JqRzm3-V2qeC6ZAcoV4ysMuLSpdrrSY8azV10K-byl8fO5bSSaKDa_I3MFlb5yjHF_B2Jey6FT6wj_g0CehDcQ"
+                                    ,"N"
+                                    ,"N"
+                                    ,"N"
+                                    ]
+                                    ]
+                                    ,"firstRow":1
+                                    ,"moreData":false
+                                    }
+                                    ;
+                                  </script>
+                                </div>
+                              </div>
+                              <div data-label="New" id="SR_R226600523274866958">
+                                <div class="t-CardsRegion u-colors" id="R226600523274866958"  role="region" aria-label="New" >
+                                  <div class="t-Region-orderBy"></div>
+                                  <div id="R226600523274866958_Cards" class="a-TMV--cards">
+                                    <ul class="a-CardView-items a-CardView-items--grid is-placeholder" aria-hidden="true">
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <script type="text/javascript">
+                                    var gCard226600523274866958data = {
+                                    "values":[
+                                    [
+                                    "15"
+                                    ,null
+                                    ,"\/ords\/r\/wstnapex\/tnapex173136\/home?request=NATIVE%3DUkVHSU9OIFRZUEV-fjIyNjYwMDUyMzI3NDg2Njk1OA%2FntBUGuNPg2tRpD35x789gfTxOAOGjFiCqS6l7Jjw90BDKAFNnrl6-h657_p0hiV7IdxzLGFICtFx1dIwwXbPAA\u0026session=16192258202907\u0026x01=eyJQSUNfSUQiOiIxNSIsImFwZXgkYXR0ciRpbWFnZSR0eXBlIjoiTUVESUEifQ%2FfAWoqfQ-JeFVot4czk3mFubqiu9YAOKa0uN9yITeYjRqsJD2DITZlbf_VCNSQZAv8hrzVvgOHV-MXYcwLbh-YQ\u0026cs=3BgSnjp9L5TdwQzJes8yv3mnHJSlftGPEMUrP00nU7XKHpMvgd7ZSKFLDo9Dp5tAm1bX4im4Ig3xqdfyoJRcHag"
+                                    ,"N"
+                                    ,"N"
+                                    ,"N"
+                                    ]
+                                    ]
+                                    ,"firstRow":1
+                                    ,"moreData":false
+                                    }
+                                    ;
+                                  </script>
+                                </div>
+                              </div>
+                              <div data-label="New" id="SR_R226600413482866956">
+                                <div class="t-CardsRegion u-colors" id="R226600413482866956"  role="region" aria-label="New" >
+                                  <div class="t-Region-orderBy"></div>
+                                  <div id="R226600413482866956_Cards" class="a-TMV--cards">
+                                    <ul class="a-CardView-items a-CardView-items--grid is-placeholder" aria-hidden="true">
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                      <li class="a-CardView-item">
+                                        <div class="a-CardView has-media has-media--first has-media--fit">
+                                          <div class="a-CardView-media a-CardView-media--first"></div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <script type="text/javascript">
+                                    var gCard226600413482866956data = {
+                                    "values":[
+                                    [
+                                    "16"
+                                    ,null
+                                    ,"\/ords\/r\/wstnapex\/tnapex173136\/home?request=NATIVE%3DUkVHSU9OIFRZUEV-fjIyNjYwMDQxMzQ4Mjg2Njk1Ng%2F7urg4qbzgcGw7RqhRGwcwfOMyfG7pIJ-A2A5NbXymtHxN_iLZEk_p-vSLSrZqNkJo_XPokDmviz1gHw3Ib1qqw\u0026session=16192258202907\u0026x01=eyJQSUNfSUQiOiIxNiIsImFwZXgkYXR0ciRpbWFnZSR0eXBlIjoiTUVESUEifQ%2FqD7ZmwSbynfoQaNh_EPIJhPycJZ8jM_M562KhfjMpt8LrAtC6EIodmLqK1vDrB1gox73OfmLoXeaTjylH2eqJg\u0026cs=3Vr3AWMGuy-U7_TqwZDu69pB_pxn0p3qRiKnG6T7BJKZnHh1X8Iyjkx37FzdQtg89QZwRgCiBNbX2xLflhuYTeg"
+                                    ,"N"
+                                    ,"N"
+                                    ,"N"
+                                    ]
+                                    ]
+                                    ,"firstRow":1
+                                    ,"moreData":false
+                                    }
+                                    ;
+                                  </script>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="t-Region-buttons t-Region-buttons--bottom">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+                    <!-- <div class="col col-12 apex-col-auto col-start col-end" >
+                      <div class="t-Region t-Region--carousel t-Region--showCarouselControls js-useLocalStorage js-cycle5s t-Region--carouselSlide t-Region--removeHeader t-Region--noBorder t-Region--hiddenOverflow" id="R148632327568730437359"  role="region" aria-label="SLIDERS" >
+                        <div class="t-Region-header">
+                          <div class="t-Region-headerItems t-Region-headerItems--title">
+                            <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                            <h2 class="t-Region-title" id="R148632327568730437359_heading" data-apex-heading>SLIDERS</h2>
+                          </div>
+                          <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                        </div>
+                        <div role="region" aria-label="SLIDERS" class="t-Region-bodyWrap">
+                          <div class="t-Region-buttons t-Region-buttons--top">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                          <div class="t-Region-body">
+                            <div class="t-Region-carouselRegions">
+                              <div data-label="TNBCC_S1" id="SR_R82273364057919505813">
+                                <div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noBorder t-Region--scrollBody" id="R82273364057919505813"  role="region" aria-label="TNBCC_S1" >
+                                  <div class="t-Region-header">
+                                    <div class="t-Region-headerItems t-Region-headerItems--title">
+                                      <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                                      <h2 class="t-Region-title" id="R82273364057919505813_heading" data-apex-heading>TNBCC_S1</h2>
+                                    </div>
+                                    <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                                  </div>
+                                  <div class="t-Region-bodyWrap">
+                                    <div class="t-Region-buttons t-Region-buttons--top">
+                                      <div class="t-Region-buttons-left"></div>
+                                      <div class="t-Region-buttons-right"></div>
+                                    </div>
+                                    <div class="t-Region-body">
+                                      <div class="t-Region-orderBy"></div>
+                                      <img class="carousel_image" src="https://www.bcc.tn.gov.in/ords/r/wstnbcc/107/files/static/v355/S1.png">
+                                    </div>
+                                    <div class="t-Region-buttons t-Region-buttons--bottom">
+                                      <div class="t-Region-buttons-left"></div>
+                                      <div class="t-Region-buttons-right"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-label="TNBCC_S2" id="SR_R82273364143934505814">
+                                <div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noBorder t-Region--scrollBody" id="R82273364143934505814"  role="region" aria-label="TNBCC_S2" >
+                                  <div class="t-Region-header">
+                                    <div class="t-Region-headerItems t-Region-headerItems--title">
+                                      <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                                      <h2 class="t-Region-title" id="R82273364143934505814_heading" data-apex-heading>TNBCC_S2</h2>
+                                    </div>
+                                    <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                                  </div>
+                                  <div class="t-Region-bodyWrap">
+                                    <div class="t-Region-buttons t-Region-buttons--top">
+                                      <div class="t-Region-buttons-left"></div>
+                                      <div class="t-Region-buttons-right"></div>
+                                    </div>
+                                    <div class="t-Region-body">
+                                      <div class="t-Region-orderBy"></div>
+                                      <img class="carousel_image" src="https://www.bcc.tn.gov.in/ords/r/wstnbcc/107/files/static/v355/S2.png">
+                                    </div>
+                                    <div class="t-Region-buttons t-Region-buttons--bottom">
+                                      <div class="t-Region-buttons-left"></div>
+                                      <div class="t-Region-buttons-right"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-label="TNBCC_S3" id="SR_R82273364301299505815">
+                                <div class="t-Region t-Region--removeHeader js-removeLandmark t-Region--noBorder t-Region--scrollBody" id="R82273364301299505815"  role="region" aria-label="TNBCC_S3" >
+                                  <div class="t-Region-header">
+                                    <div class="t-Region-headerItems t-Region-headerItems--title">
+                                      <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                                      <h2 class="t-Region-title" id="R82273364301299505815_heading" data-apex-heading>TNBCC_S3</h2>
+                                    </div>
+                                    <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                                  </div>
+                                  <div class="t-Region-bodyWrap">
+                                    <div class="t-Region-buttons t-Region-buttons--top">
+                                      <div class="t-Region-buttons-left"></div>
+                                      <div class="t-Region-buttons-right"></div>
+                                    </div>
+                                    <div class="t-Region-body">
+                                      <div class="t-Region-orderBy"></div>
+                                      <img class="carousel_image" src ="https://www.bcc.tn.gov.in/ords/r/wstnbcc/107/files/static/v355/S3.png">
+                                    </div>
+                                    <div class="t-Region-buttons t-Region-buttons--bottom">
+                                      <div class="t-Region-buttons-left"></div>
+                                      <div class="t-Region-buttons-right"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="t-Region-buttons t-Region-buttons--bottom">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+                    <div id="carouselExampleIndicators" class="carousel slide col-12 apex-col-auto col-start col-end mt-5">
+                        <div class="carousel-indicators">   
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/img/1.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/2.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/3.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/img/4.png" class="d-block w-100" alt="...">
+                          </div> 
+                        </div> 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+
+
+
+
+                  </div>
+                  <div class="row ">
+                    <div class="col col-12 apex-col-auto col-start col-end" >
+                      <div class="t-Region pad  t-Region--removeHeader js-removeLandmark t-Region--scrollBody" id="about"  role="region" aria-label="Tamil&#x20;Nadu&#x20;Food&#x20;Processing&#x20;and&#x20;Agri&#x20;Export&#x20;Promotion&#x20;Corporation&#x20;&#x28;TNAPEx&#x29;" >
+                        <div class="t-Region-header">
+                          <div class="t-Region-headerItems t-Region-headerItems--title">
+                            <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                            <h2 class="t-Region-title" id="about_heading" data-apex-heading>Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)</h2>
+                          </div>
+                          <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                        </div>
+                        <div class="t-Region-bodyWrap">
+                          <div class="t-Region-buttons t-Region-buttons--top">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                          <div class="t-Region-body">
+                            <div class="t-Region-orderBy"></div>
+                            <div class="row">
+                              <div class="col-9" data-aos="fade">
+                                <h2>“Globalizing Tamil Nadu Food Processing Businesses”</h2>
+                                <hr>
+                                <p>
+                                  With a production of about 1.2 million tons of food grains, nearly 1.0 million tons of oilseeds, 6.7 million tons of fruits and 6.0 million tons of vegetables, Tamil Nadu contributes substantially to the agricultural production of India.  To add on further, the state produces about 15.0 million tons of sugarcane, 5.6 million tons of plantation crops and houses 1200 million poultry and 240 million livestock population.  The state has about 24,000 SMEs and 1100 medium and large units in food processing sector and contributes to 7.2% of processed food outputs of India.<br>
+                                  <br>
+                                  Tamil Nadu processes only about 2% of fruits and vegetables, 8% of marine produce, 35% of milk and 6% of poultry meat.  The State Government envisages to substantially increase the processing and value addition levels and to reduce the post-harvest food losses.  Therefore, the need for having a separate food processing and Agri export corporation in the State was greatly felt.<br>
+                                  <br> 
+                                <h3>Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)</h3>
+                                <p> <br>Hon’ble Minister for Agriculture and Farmers’ Welfare Announced in 2021-22, the creation of Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx) to bring in overall reforms in the food processing and agricultural export sectors.  It is a not-for-profit company under Section 8 of Companies Act, 2013.  TNAPEx acts as an apex body for the promotion of Food Processing and Agri Export.<br>
+                                  <br>
+                                  TNAPEx – Rendering Niche Services to Accelerate Food Processing MSME Business Transformation
+                                  Food processing essays a critical role in an agrarian economy like India; it’s all the more profound in states like Tamil Nadu which produces diverse food crops.  Value wise, nationally, Tamil Nadu ranks 5th in export of agriculture and animal produce, and 6th in export of fisheries products.  And the larger objective is to better these rankings. Tamil Nadu is in a vantage position to achieve the same, thanks to robust infrastructure like rail & road networks, airports, sea ports and more.
+                                  <br>
+                                </p>
+                                <br>
+                                <h2>Vision :</h2>
+                                <hr>
+                                <p>
+                                  To steer Tamil Nadu as the premier food processing hub of India by harnessing its production strength, deep industrial culture, skilled manpower, favourable agro-climatic conditions and excellent connectivity. To capitalize on the rich and diverse food production base of the State and to provide fillip to this sector.
+                                </p>
+                                <h2>Mission :</h2>
+                                <hr>
+                                <p>
+                                  To propel Tamil Nadu's agricultural and food processing sectors towards global prominence by fostering innovation, sustainability, and market-driven strategies. Through strategic partnerships, infrastructure development, and capacity building initiatives, TNAPEx aims to  empower farmers, rural youth and women, agri-entrepreneurs, food business operators, MSME’s and stakeholders, while promoting value addition, quality excellence, and export competitiveness.
+                                  </pr>
+                                  <br>
+                                  <br>Our mission further is to drive inclusive growth, enhance food security, and maximize the economic potential of Tamil Nadu's rich agricultural resources, ultimately contributing to the state's prosperity and global leadership in agri-food exports.<br>
+                                </p>
+                              </div>
+                              <div class="col">
+                                <!-- <img  data-aos="zoom-in" data-aos-duration="200" src="r/wstnapex/136/files/static/v1410/home-svg.svg" id="home-svg"> -->
+                                <img  data-aos="zoom-in" data-aos-duration="200" src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/5.png" id="home-svg">
+                                <br>
+                                <img  data-aos="zoom-in" data-aos-duration="200" src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/Food_image_3.jpeg" id="home-svg">
+                                <br>
+                                <!-- <img  data-aos="zoom-in" data-aos-duration="200" src="r/wstnapex/136/files/static/v1410/Food_image_1.jpeg" id="home-svg"> -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="t-Region-buttons t-Region-buttons--bottom">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col col-12 apex-col-auto col-start col-end" >
+                      <div class="t-Region pad container2  t-Region--removeHeader js-removeLandmark t-Region--scrollBody" id="Objectives"  role="region" aria-label="New" >
+                        <div class="t-Region-header">
+                          <div class="t-Region-headerItems t-Region-headerItems--title">
+                            <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+                            <h2 class="t-Region-title" id="Objectives_heading" data-apex-heading>New</h2>
+                          </div>
+                          <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+                        </div>
+                        <div class="t-Region-bodyWrap">
+                          <div class="t-Region-buttons t-Region-buttons--top">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                          <div class="t-Region-body">
+                            <div class="t-Region-orderBy"></div>
+                            <!-- <img id="float-img" src="r/wstnapex/136/files/static/v1410/logo.png"> -->
+                            <div class="z-front">
+                              <h2 class="text-middle">The Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)</h2>
+                              <h3>Objectives:</h3>
+                              <p>
+                                1. Promoting Food processing and Agri Export in the State for better monetization of agricultural and allied produce. 
+                              </p>
+                              <p>
+                                2. Harness the Food processing and export potential of agricultural produce of Tamil Nadu through suitable policy instrument and institutional support. 
+                              </p>
+                              <p>
+                                3. Facilitating development of storage, processing and logistic infrastructure pertaining to Food Processing & Export in the State to minimize the wastage of agricultural and allied produce and maintain a seamless supply chain.
+                              </p>
+                              <p>
+                                4. Decreasing post-harvest losses due to better technologies and improved value chain, besides ensuring availability of quality food.
+                              </p>
+                              <p>
+                                5. Scouting for modern technologies in the food processing sector from across the globe and incorporating them in the food processing industries in the State.
+                              </p>
+                              <p>
+                                6. Providing support through the incentives and assistances available under TN Food Processing Policy, 2018 for encouraging food processing sector. 
+                              </p>
+                              <p>
+                                7. Monitoring and implementing the various Government schemes on Food Processing and Agri Exports. 
+                              </p>
+                              <p>
+                                8. Promoting and facilitating Agricultural exports by building the capacities of farmers and exporters on export standards and norms set by various importing countries. 
+                              </p>
+                              <p>
+                                9. To create platform to facilitate ecommerce, traceability and database maintenance. 
+                              </p>
+                              <p>
+                                10. Increasing employment opportunities and thereby improving the socio-economic condition of the people of Tamil Nadu. 
+                              </p>
+                              <p>
+                                11. To provide trainings to farmers, farmers producer organizations, entrepreneurs and exporters in various aspects of the food processing and agricultural.
+                              </p>
+                              <p>
+                                12. Raising State GDP through the food processing and export sectors.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="t-Region-buttons t-Region-buttons--bottom">
+                            <div class="t-Region-buttons-left"></div>
+                            <div class="t-Region-buttons-right"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="t-Body-contentInner"></div>
+            </main>
+            <footer class="t-Footer" id="t_Footer" role="contentinfo">
+              <div class="t-Footer-body">
+                <div class="t-Footer-content"></div>
+                <div class="t-Footer-apex">
+                  <!-- <div class="t-Footer-version">Release 1.0</div>
+                    <div class="t-Footer-customize"></div>
+                     -->
+                  <div class="row">
+                    <div class="col text-middle">
+                      <h5>Office</h5>
+                      <span aria-hidden="true" class="fa fa-university fa-2x fa-lg"></span>
+                      <p><span class="strng">Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx),</span> <br>1st floor, IC & DIC, SIDCO Corporate Office Building,<br>Thiru. Vi. Ka. Industrial Estate,Guindy, <br>Chennai – 600 032.</p>
+                      <div><a href="mailto:mailID@tn.gov.in" class="links">md.tnapex@tn.gov.in, tnfpaec@gmail.com</a></div>
+                      <!-- <div><a href="tel:0440000000" class="links"> md.tnapex@tn.gov.in</a></div> -->
+                    </div>
+                    <div class="col text-middle">
+                      <h5>Locate us</h5>
+                      <iframe class="gmap"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.408676199633!2d80.20765587507711!3d13.009627087309198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676f2b4f98e9%3A0xe18cf1a219707f58!2sCOMMISSIONERATE%20OF%20INDUSTRIES%20AND%20COMMERCE!5e0!3m2!1sen!2sin!4v1703071419786!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" view-mode="satelite">
+                      </iframe>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col text-middle">
+                      <img class="footer-logo" src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/logo.png">
+                      <p class="text-middle">Content owned by TNAPEx ©</p>
+                    </div>
+                    <div class="col text-middle">
+                      <img class="footer-logo" src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/tnega_logo.png">
+                      <p class="text-middle">Designed and Developed by Tamil Nadu e-Governance Agency</p>
+                    </div>
+                    <!-- <div class="main-footer-dtls"><p class="text-middle"><img class="footer-logo" src="r/wstnapex/files/static/v1/tn_logo.png"><br>Content owned by Tamil Nadu Online Gaming Authority ©</p></div>
+                      <div class="main-footer-dtls"><p class="text-middle"><img class="footer-logo" src="r/wstnapex/files/static/v1/tnega_logo.png"><br>Designed and Developed by Tamil Nadu e-Governance Agency</p></div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="t-Footer-top">
+                <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div>
+      <input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+      <input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="&#x2F;1O6on85loeMhoA0lj6NK31pqGfzfTYqNTuPeWwQ_pHZc8tpa3gkkDsvJsvCszMALUuGJCryGuNho37MRiiYSRQ" />
+    </form>
+    <script>
+      var apex_img_dir = "\u002Fi\u002F";
+      var apex = {env: {APP_USER: "nobody",APP_ID: "136",APP_PAGE_ID: "1",APP_SESSION: "16192258202907",APP_FILES: "r\u002Fwstnapex\u002F136\u002Ffiles\u002Fstatic\u002Fv1410\u002F",WORKSPACE_FILES: "r\u002Fwstnapex\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "23.2.1",APEX_BASE_VERSION: "23.2"},
+      libVersions:{ckeditor5:"36.0.0",cropperJs:"1.5.13",domPurify:"3.0.5",fullcalendar:"6.1.8",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"2.4.0",markedJs:"5.1.2",prismJs:"1.29.0",oraclejet:"15.0.7",tinymce:"6.7.1",turndown:"7.1.1",monacoEditor:"0.32.1",lessJs:"4.1.3"}};
+    </script>
+    <!-- <script type="text/javascript" src="https://www.tnapex.tn.gov.in/ords/wwv_flow.js_messages?p_app_id=136&p_lang=en&p_version=23.2.1-201478425"></script> -->
+    <script type="text/javascript" src="assets/js/desktop_all.min.js"></script>
+    <script type="text/javascript" src="assets/js/widget.stickyWidget.min.js"></script>
+    <script type="text/javascript" src="assets/js/theme42.min.js"></script>
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <script type="text/javascript" src="assets/js/add.min.js"></script>
+    <script type="text/javascript" src="assets/js/widget.apexTabs.min.js"></script>
+    <script type="text/javascript" src="assets/js/com.oracle.apex.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/modelViewBase.min.js"></script>
+    <script type="text/javascript" src="assets/js/widget.templateReport.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+      apex.da.initDaEventList = function(){
+      apex.da.gEventList = [
+      {"triggeringElementType":"ITEM","triggeringElement":"P0_LANGUAGE","bindType":"bind","executionType":"IMMEDIATE","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"REEgVFlQRX5-MTQ1Nzk4MzA3Njk1NzEzMTY3\u002FUDoTqUY36F52PKjDfGaOOuBELVasf_sICUS3wUZo2d7_VzxLbBUk3gbGGtl6dM0in7YBxJrb8en_skscGeRWnw","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:apex.da.submitPage,"attribute02":"Y","action":"NATIVE_SUBMIT_PAGE"}]}];
+      }
+    </script>
+    <script type="text/javascript">
+      apex.jQuery( function() {
+      apex.page.init( this, function() {
+      try {
+      (function(){var e = apex.jQuery("#t_MenuNav", apex.gPageContext$);
+      if (e.hasClass("js-addActions")) {
+        apex.actions.addFromMarkup( e );
+      }
+      e.menu({
+        behaveLikeTabs: e.hasClass("js-tabLike"),
+        menubarShowSubMenuIcon: e.hasClass("js-showSubMenuIcons") || null,
+        menubar: true,
+        menubarOverflow: true,
+        callout: e.hasClass("js-menu-callout")
+      });
+      })();
+      (function(){apex.util.defineTemplates([{"name":"APEX_CARDS_BEFORE","template":"\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A","args":[{"name":"CARD_LAYOUT","escape":"ATTR"},{"name":"COMPONENT_CLASSES","escape":"ATTR"}]},{"name":"APEX_CARDS_CARD_202078629672513698","template":"\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--first has-media--fit{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=assets/img/one.png","args":[
+        {"name": "CARD_CLASSES", "escape": "ATTR"},
+        {"name": "MEDIA_POSITION", "escape": "ATTR"},
+        {"name": "MEDIA_APPEARANCE", "escape": "ATTR"},
+        {"name": "MEDIA_SIZING", "escape": "ATTR"},
+        {"name": "MEDIA_CLASSES", "escape": "ATTR"},
+        {"name": "MEDIA", "escape": "ATTR", "src": "assets/img/one.png"}
+      ]},{"name":"APEX_CARDS_AFTER","template":"\u003C\u002Ful\u003E"}]);apex.widget.templateReportRegionInit({"regionId":"202078629672513698","regionStaticId":"R202078629672513698","regionType":"Cards","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjIwMjA3ODYyOTY3MjUxMzY5OA\u002FIwiS70OkksnVLSYtb_d-_gurmNuz2hJGYRlgXfRo0ua06miFnpHLL6fW3Qf-DqXB5Kz_L0lvnbCztWt2TzvRsQ","modelName":"R202078629672513698","modelOptions":{"regionId":202078629672513698,"paginationType":"progressive","pageSize":100,"identityField":"PIC_ID"},"pagination":{"scroll":true,"showRange":false,"firstAndLastButtons":false,"hideSinglePage":true},"footer":false,"hideEmptyFooter":true,"hasSize":false,"beforeTemplate":"{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--grid\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}","recordTemplate":"{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--first\u000AMEDIA_APPEARANCE:=\u000AMEDIA_SIZING:=a-CardView-media--fit\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PICS_ATTACHMENT_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_202078629672513698\u002F}","afterTemplate":"{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}","columns":[{"PIC_ID":{"index":0},"PICS_ATTACHMENT":{"index":1},"APEX$PICS_ATTACHMENT_BLOB":{"index":2},"APEX$BUTTON_ACTION_EXISTS":{"index":3},"APEX$FULL_ACTION_EXISTS":{"index":4},"APEX$ACTION_EXISTS":{"index":5}}]},gCard202078629672513698data);})();
+      (function(){apex.util.defineTemplates([{"name":"APEX_CARDS_BEFORE","template":"\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A","args":[{"name":"CARD_LAYOUT","escape":"ATTR"},{"name":"COMPONENT_CLASSES","escape":"ATTR"}]},{"name":"APEX_CARDS_CARD_202079220416513704","template":"\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--first has-media--fit{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A","args":[{"name":"CARD_CLASSES","escape":"ATTR"},{"name":"MEDIA_POSITION","escape":"ATTR"},{"name":"MEDIA_APPEARANCE","escape":"ATTR"},{"name":"MEDIA_SIZING","escape":"ATTR"},{"name":"MEDIA_CLASSES","escape":"ATTR"},{"name":"MEDIA","escape":"ATTR"}]},{"name":"APEX_CARDS_AFTER","template":"\u003C\u002Ful\u003E"}]);apex.widget.templateReportRegionInit({"regionId":"202079220416513704","regionStaticId":"R202079220416513704","regionType":"Cards","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjIwMjA3OTIyMDQxNjUxMzcwNA\u002FfHjJNSlgRGoyAxZCFHXvUwC_grw-h81Eh9gX1E_2JaX0dZhP52eOl0z1spqmjF-gFkMURLFqySMznaSvCqWQdQ","modelName":"R202079220416513704","modelOptions":{"regionId":202079220416513704,"paginationType":"progressive","pageSize":100,"identityField":"PIC_ID"},"pagination":{"scroll":true,"showRange":false,"firstAndLastButtons":false,"hideSinglePage":true},"footer":false,"hideEmptyFooter":true,"hasSize":false,"beforeTemplate":"{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--grid\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}","recordTemplate":"{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--first\u000AMEDIA_APPEARANCE:=\u000AMEDIA_SIZING:=a-CardView-media--fit\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PICS_ATTACHMENT_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_202079220416513704\u002F}","afterTemplate":"{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}","columns":[{"PIC_ID":{"index":0},"PICS_ATTACHMENT":{"index":1},"APEX$PICS_ATTACHMENT_BLOB":{"index":2},"APEX$BUTTON_ACTION_EXISTS":{"index":3},"APEX$FULL_ACTION_EXISTS":{"index":4},"APEX$ACTION_EXISTS":{"index":5}}]},gCard202079220416513704data);})();
+      (function(){apex.util.defineTemplates([{"name":"APEX_CARDS_BEFORE","template":"\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A","args":[{"name":"CARD_LAYOUT","escape":"ATTR"},{"name":"COMPONENT_CLASSES","escape":"ATTR"}]},{"name":"APEX_CARDS_CARD_226600523274866958","template":"\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--first has-media--fit{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A","args":[{"name":"CARD_CLASSES","escape":"ATTR"},{"name":"MEDIA_POSITION","escape":"ATTR"},{"name":"MEDIA_APPEARANCE","escape":"ATTR"},{"name":"MEDIA_SIZING","escape":"ATTR"},{"name":"MEDIA_CLASSES","escape":"ATTR"},{"name":"MEDIA","escape":"ATTR"}]},{"name":"APEX_CARDS_AFTER","template":"\u003C\u002Ful\u003E"}]);apex.widget.templateReportRegionInit({"regionId":"226600523274866958","regionStaticId":"R226600523274866958","regionType":"Cards","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjIyNjYwMDUyMzI3NDg2Njk1OA\u002FntBUGuNPg2tRpD35x789gfTxOAOGjFiCqS6l7Jjw90BDKAFNnrl6-h657_p0hiV7IdxzLGFICtFx1dIwwXbPAA","modelName":"R226600523274866958","modelOptions":{"regionId":226600523274866958,"paginationType":"progressive","pageSize":100,"identityField":"PIC_ID"},"pagination":{"scroll":true,"showRange":false,"firstAndLastButtons":false,"hideSinglePage":true},"footer":false,"hideEmptyFooter":true,"hasSize":false,"beforeTemplate":"{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--grid\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}","recordTemplate":"{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--first\u000AMEDIA_APPEARANCE:=\u000AMEDIA_SIZING:=a-CardView-media--fit\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PICS_ATTACHMENT_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_226600523274866958\u002F}","afterTemplate":"{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}","columns":[{"PIC_ID":{"index":0},"PICS_ATTACHMENT":{"index":1},"APEX$PICS_ATTACHMENT_BLOB":{"index":2},"APEX$BUTTON_ACTION_EXISTS":{"index":3},"APEX$FULL_ACTION_EXISTS":{"index":4},"APEX$ACTION_EXISTS":{"index":5}}]},gCard226600523274866958data);})();
+      (function(){apex.util.defineTemplates([{"name":"APEX_CARDS_BEFORE","template":"\u003Cul class=\u0022a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\u0022\u003E\u000A","args":[{"name":"CARD_LAYOUT","escape":"ATTR"},{"name":"COMPONENT_CLASSES","escape":"ATTR"}]},{"name":"APEX_CARDS_CARD_226600413482866956","template":"\u003Cli class=\u0022a-CardView-item \u0026APEX$ROW_STATE_CLASSES.\u0022 data-id=\u0022\u0026APEX$ROW_ID.\u0022 data-rownum=\u0022\u0026APEX$ROW_INDEX.\u0022\u003E\u000A\u003Cdiv class=\u0022a-CardView{if ?MEDIA\u002F} has-media has-media--first has-media--fit{endif\u002F}{if APEX$ACTION_EXISTS\u002F} has-actions{endif\u002F}{if APEX$FULL_ACTION_EXISTS\u002F} has-actions--full{endif\u002F} #CARD_CLASSES#\u0022\u003E\u000A{if ?MEDIA\u002F}\u000A\u003Cdiv class=\u0022a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\u0022\u003E\u000A\u003Cimg class=\u0022a-CardView-mediaImg\u0022 src=\u0022#MEDIA#\u0022 alt=\u0022\u0022 loading=\u0022lazy\u0022 \u002F\u003E\u003C\u002Fdiv\u003E\u000A{endif\u002F}\u000A\u003C\u002Fdiv\u003E\u000A\u003C\u002Fli\u003E\u000A","args":[{"name":"CARD_CLASSES","escape":"ATTR"},{"name":"MEDIA_POSITION","escape":"ATTR"},{"name":"MEDIA_APPEARANCE","escape":"ATTR"},{"name":"MEDIA_SIZING","escape":"ATTR"},{"name":"MEDIA_CLASSES","escape":"ATTR"},{"name":"MEDIA","escape":"ATTR"}]},{"name":"APEX_CARDS_AFTER","template":"\u003C\u002Ful\u003E"}]);apex.widget.templateReportRegionInit({"regionId":"226600413482866956","regionStaticId":"R226600413482866956","regionType":"Cards","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjIyNjYwMDQxMzQ4Mjg2Njk1Ng\u002F7urg4qbzgcGw7RqhRGwcwfOMyfG7pIJ-A2A5NbXymtHxN_iLZEk_p-vSLSrZqNkJo_XPokDmviz1gHw3Ib1qqw","modelName":"R226600413482866956","modelOptions":{"regionId":226600413482866956,"paginationType":"progressive","pageSize":100,"identityField":"PIC_ID"},"pagination":{"scroll":true,"showRange":false,"firstAndLastButtons":false,"hideSinglePage":true},"footer":false,"hideEmptyFooter":true,"hasSize":false,"beforeTemplate":"{with\u002F}\u000ACARD_LAYOUT:=a-CardView-items--grid\u000ACOMPONENT_CLASSES:=\u000A{apply APEX_CARDS_BEFORE\u002F}","recordTemplate":"{with\u002F}\u000ACARD_CLASSES:=\u000AMEDIA_POSITION:=a-CardView-media--first\u000AMEDIA_APPEARANCE:=\u000AMEDIA_SIZING:=a-CardView-media--fit\u000AMEDIA_CLASSES:=\u000AMEDIA:=\u0026\u0022APEX$PICS_ATTACHMENT_BLOB\u0022!RAW.\u000A{apply APEX_CARDS_CARD_226600413482866956\u002F}","afterTemplate":"{with\u002F}\u000A{apply APEX_CARDS_AFTER\u002F}","columns":[{"PIC_ID":{"index":0},"PICS_ATTACHMENT":{"index":1},"APEX$PICS_ATTACHMENT_BLOB":{"index":2},"APEX$BUTTON_ACTION_EXISTS":{"index":3},"APEX$FULL_ACTION_EXISTS":{"index":4},"APEX$ACTION_EXISTS":{"index":5}}]},gCard226600413482866956data);})();
+      } catch(e) {apex.debug.error(e)};
+      apex.item.waitForDelayLoadItems().done(function() {
+      try {
+      (function(){apex.da.initDaEventList();
+      apex.da.init();})();
+      apex.theme42.initializePage.noSideCol();
+      
+      apex.page.warnOnUnsavedChanges();
+      } finally {
+      apex.event.trigger(apex.gPageContext$,'apexreadyend');
+      };
+      });
+      });
+      });apex.pwa.init( { serviceWorkerPath:'\u002Fords\u002Fr\u002Fwstnapex\u002Ftnapex173136\u002Fsw.js?v=23.2.1-201478425\u0026lang=en' } );
+    </script>
+    <script>
+      apex.jQuery(function() {
+          apex.page.init(this, function() {
+              try {
+                  (function() {
+                      var e = apex.jQuery("#t_MenuNav", apex.gPageContext$);
+                      if (e.hasClass("js-addActions")) {
+                          apex.actions.addFromMarkup(e);
+                      }
+                      e.menu({
+                          behaveLikeTabs: e.hasClass("js-tabLike"),
+                          menubarShowSubMenuIcon: e.hasClass("js-showSubMenuIcons") || null,
+                          menubar: true,
+                          menubarOverflow: true,
+                          callout: e.hasClass("js-menu-callout")
+                      });
+                  })();
+      
+                  // Modify Cards templates and set local image path for card images
+                  apex.util.defineTemplates([{
+                      "name": "APEX_CARDS_BEFORE",
+                      "template": "<ul class=\"a-CardView-items #CARD_LAYOUT# #COMPONENT_CLASSES#\">\n",
+                      "args": [{
+                          "name": "CARD_LAYOUT",
+                          "escape": "ATTR"
+                      }, {
+                          "name": "COMPONENT_CLASSES",
+                          "escape": "ATTR"
+                      }]
+                  }, {
+                      "name": "APEX_CARDS_CARD_202078629672513698",
+                      "template": "<li class=\"a-CardView-item &APEX$ROW_STATE_CLASSES.\" data-id=\"&APEX$ROW_ID.\" data-rownum=\"&APEX$ROW_INDEX.\">\n" +
+                          "<div class=\"a-CardView {if ?MEDIA/} has-media has-media--first has-media--fit {endif/}{if APEX$ACTION_EXISTS/} has-actions {endif/}{if APEX$FULL_ACTION_EXISTS/} has-actions--full {endif/} #CARD_CLASSES#\">\n" +
+                          "{if ?MEDIA/}\n" +
+                          "<div class=\"a-CardView-media #MEDIA_POSITION# #MEDIA_APPEARANCE# #MEDIA_SIZING# #MEDIA_CLASSES#\">\n" +
+                          "<img class=\"a-CardView-mediaImg\" src=\"assets/img/one.png\" />\n" +  // Here replace with local image
+                          "</div>\n" +
+                          "{endif/}\n" +
+                          "</div>\n" +
+                          "</li>\n",
+                      "args": [{
+                          "name": "CARD_CLASSES",
+                          "escape": "ATTR"
+                      }, {
+                          "name": "MEDIA_POSITION",
+                          "escape": "ATTR"
+                      }, {
+                          "name": "MEDIA_APPEARANCE",
+                          "escape": "ATTR"
+                      }, {
+                          "name": "MEDIA_SIZING",
+                          "escape": "ATTR"
+                      }, {
+                          "name": "MEDIA_CLASSES",
+                          "escape": "ATTR"
+                      }, {
+                          "name": "MEDIA",
+                          "escape": "ATTR",
+                          "src": "assets/img/one.png"  // Use local path for the image here
+                      }]
+                  }, {
+                      "name": "APEX_CARDS_AFTER",
+                      "template": "</ul>"
+                  }]);
+      
+                  // Initialize the report region with local image paths
+                  apex.widget.templateReportRegionInit({
+                      "regionId": "202078629672513698",
+                      "regionStaticId": "R202078629672513698",
+                      "regionType": "Cards",
+                      "ajaxIdentifier": "YourAjaxIdentifier",
+                      "modelName": "R202078629672513698",
+                      "modelOptions": {
+                          "regionId": 202078629672513698,
+                          "paginationType": "progressive",
+                          "pageSize": 100,
+                          "identityField": "PIC_ID"
+                      },
+                      "pagination": {
+                          "scroll": true,
+                          "showRange": false,
+                          "firstAndLastButtons": false,
+                          "hideSinglePage": true
+                      },
+                      "footer": false,
+                      "hideEmptyFooter": true,
+                      "hasSize": false,
+                      "beforeTemplate": "{with/}\nCARD_LAYOUT:=a-CardView-items--grid\nCOMPONENT_CLASSES:=\n{apply APEX_CARDS_BEFORE/}",
+                      "recordTemplate": "{with/}\nCARD_CLASSES:=\nMEDIA_POSITION:=a-CardView-media--first\nMEDIA_APPEARANCE:=\nMEDIA_SIZING:=a-CardView-media--fit\nMEDIA_CLASSES:=\nMEDIA:=\"assets/img/one.png\"\n{apply APEX_CARDS_CARD_202078629672513698/}",
+                      "afterTemplate": "{with/}\n{apply APEX_CARDS_AFTER/}",
+                      "columns": [{
+                          "PIC_ID": {
+                              "index": 0
+                          },
+                          "PICS_ATTACHMENT": {
+                              "index": 1
+                          },
+                          "APEX$PICS_ATTACHMENT_BLOB": {
+                              "index": 2
+                          },
+                          "APEX$BUTTON_ACTION_EXISTS": {
+                              "index": 3
+                          },
+                          "APEX$FULL_ACTION_EXISTS": {
+                              "index": 4
+                          },
+                          "APEX$ACTION_EXISTS": {
+                              "index": 5
+                          }
+                      }]
+                  });
+              } catch (error) {
+                  console.error("Error initializing the APEX page:", error);
+              }
+          });
+      });
+      
+    </script>
+    <script>
+      AOS.init();
+    </script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+
+
+
+  </body>
+</html>
