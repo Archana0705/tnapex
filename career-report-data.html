@@ -401,7 +401,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="editForm" enctype="multipart/form-data">
+          <form id="editForm" enctype="multipart/form-data" autocomplete="off">
             <div class="mb-3">
               <label for="uploadPDF" class="form-label">Upload PDF</label>
               <input type="file" class="form-control" id="uploadPDF" name="upload_pdf" accept="application/pdf"
@@ -432,7 +432,7 @@
       <button id="closeModalBtn">Close</button>
     </div>
     <div class="modal-body">
-      <form id="pdf-upload-form" enctype="multipart/form-data">
+      <form id="pdf-upload-form" enctype="multipart/form-data" autocomplete="off">
         <label for="pdfFile">Upload PDF Attachment:</label>
         <input type="file" id="pdfFile" accept=".pdf" required>
         <br><br>
