@@ -220,7 +220,7 @@
                                   data-escape="true">616176</span>
 
                               </div>
-                              <button style="border: none;" id="refreshCaptcha"><i
+                              <button type="button" style="border: none;" id="refreshCaptcha"><i
                                   class="bi bi-arrow-clockwise"></i></button>
                               <span id="P9999_CAPT_error_placeholder" class="a-Form-error"
                                 data-template-id="70091003022793546032_ET"></span>
@@ -305,36 +305,31 @@
     });
 
     document.getElementById("refreshCaptcha").onclick = function () {
+      event.preventDefault();
       let newCaptcha = generateCaptcha(6);
       document.getElementById("P9999_CAPT_DISPLAY").textContent = newCaptcha;
       document.getElementById("P9999_CAPT").value = newCaptcha;
     };
 
-
-
     function showSuccessToast(message) {
       const toastElement = document.getElementById('successToast');
       const toastBody = document.getElementById('successMessage');
 
-      // Set the dynamic message
       toastBody.textContent = message;
 
-      // Initialize and show the toast
       const toast = new bootstrap.Toast(toastElement, {
         autohide: true,
         delay: 3000
       });
       toast.show();
     }
-    // Function to show a error toast with a dynamic message
+
     function showErrorToast(message) {
       const toastElement = document.getElementById('errorToast');
       const toastBody = document.getElementById('errorMessage');
 
-      // Set the dynamic message
       toastBody.textContent = message;
 
-      // Initialize and show the toast
       const toast = new bootstrap.Toast(toastElement, {
         autohide: true,
         delay: 3000
@@ -343,16 +338,15 @@
     }
 
 
-    var generatedCaptcha = generateCaptcha(6);  // Generate a 6-character CAPTCHA
-    document.getElementById('P9999_CAPT').value = generatedCaptcha;  // Store the correct CAPTCHA value in the hidden field
-    document.getElementById('P9999_CAPT_DISPLAY').textContent = generatedCaptcha;  // Display the CAPTCHA for the user
-    // Function to show a success toast with a dynamic message
+    var generatedCaptcha = generateCaptcha(6);
+    document.getElementById('P9999_CAPT').value = generatedCaptcha;
+    document.getElementById('P9999_CAPT_DISPLAY').textContent = generatedCaptcha;
+
     $(document).ready(function () {
-      // Check if 'Remember username' is set in localStorage and pre-fill the form
       if (localStorage.getItem('rememberUsername') === 'true') {
-        $('#P9999_REMEMBER').prop('checked', true); // Check the checkbox
-        $('#username').val(localStorage.getItem('username')); // Pre-fill username
-        $('#password').val(localStorage.getItem('password')); // Pre-fill password
+        $('#P9999_REMEMBER').prop('checked', true);
+        $('#username').val(localStorage.getItem('username'));
+        $('#password').val(localStorage.getItem('password'));
       }
 
       // Handle form submission
