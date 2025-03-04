@@ -420,11 +420,7 @@
             </div>
             <div class="mb-3">
               <label for="uploadImage" class="form-label">Upload New Image</label>
-<<<<<<< HEAD
-              <input type="file" id="uploadPDF" class="form-control" accept=".jpg, .jpeg, .pdf, .doc, .docx, .xlsx">
-=======
               <input type="file" id="uploadPDF" class="form-control" accept="image/*">
->>>>>>> 8a51a13188f806d94cc1d62925a338ec8a00da18
               <!-- <input type="file" id="uploadImage" class="form-control" accept="image/*"> -->
               <br><br>
             </div>
@@ -504,20 +500,6 @@
   <!-- create -->
   <script>
     $(document).ready(function () {
-<<<<<<< HEAD
-      $('#uploadPDF').on('change', function (event) {
-        debugger;
-        const file = event.target.files[0];
-        const fileName = file.name;
-        const allowedExtensions = /(\.jpg|\.jpeg|\.pdf|\.doc|\.docx|\.xlsx|\.png)$/i;
-        if (!allowedExtensions.test(fileName) || fileName.split('.').length !== 2) {
-          alert('Invalid file type. Only .jpg, .jpeg, .pdf, .doc, .docx, .xlsx files are allowed.');
-          $(this).val('');
-          return;
-        }
-      });
-=======
->>>>>>> 8a51a13188f806d94cc1d62925a338ec8a00da18
       // API call to get data
       $.ajax({
         url: "http://192.168.5.247:2208/tnapex/departmentdetails",
@@ -604,57 +586,6 @@
   </script>
 
   <!-- create -->
-<<<<<<< HEAD
-
-  <!-- edit & update -->
-  <script>
-    // Edit button functionality
-    let selectedRow, currentImageFilename;
-    $('#userTable tbody').on('click', '.edit-btn', function () {
-      selectedRow = $(this).closest('tr');
-      var userId = selectedRow.data('id');
-
-      var name = selectedRow.find('td:nth-child(2)').text();
-      var department = selectedRow.find('td:nth-child(3)').text();
-      var designation = selectedRow.find('td:nth-child(4)').text();
-      currentImageFilename = selectedRow.find('td:nth-child(5)').text();
-
-      $('#editName').val(name);
-      $('#editDepartment').val(department);
-      $('#editDesignation').val(designation);
-      $('#image_filename').text(currentImageFilename); // Show the current image filename
-
-      $('#uploadPDF').val(''); // Clear the file input field
-      $('#editModal').modal('show');
-    });
-
-    $('#updateBtn').on('click', async function () {
-      var updatedName = $('#editName').val();
-      var updatedDepartment = $('#editDepartment').val();
-      var updatedDesignation = $('#editDesignation').val();
-      var userId = selectedRow.data('id');
-      var token = localStorage.getItem('token');
-
-      var formData = new FormData();
-      formData.append('name', updatedName);
-      formData.append('department', updatedDepartment);
-      formData.append('designation', updatedDesignation);
-
-      // Check for the file input
-      var fileInput = $('#uploadPDF')[0];
-      if (fileInput && fileInput.files.length > 0) {
-        var file = fileInput.files[0]; // Get the uploaded file
-        formData.append('image', file); // Append file to form data
-      }
-
-      try {
-        const response = await fetch(`http://192.168.5.247:2208/tnapex/editdepartment/${userId}`, {
-          method: 'PUT',
-          headers: {
-            "Authorization": `Bearer ${token}`
-          },
-          body: formData
-=======
 
   <!-- edit & update -->
   <script>
@@ -675,22 +606,10 @@
         $(selector).on('input', function () {
           let sanitizedValue = $(this).val().replace(regex, '');
           $(this).val(sanitizedValue);
->>>>>>> 8a51a13188f806d94cc1d62925a338ec8a00da18
         });
       }
       restrictInput('#editName, #editDepartment, #editDesignation', /[^a-zA-Z0-9\s.,\-']/g);
 
-<<<<<<< HEAD
-        if (response.status === 403) {
-          handleTokenExpiration();
-        } else if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        } else {
-          const data = await response.json();
-          console.log("i'm from data", data)
-          alert('User detail updated successfully!');
-
-=======
       $('#editName, #editDepartment, #editDesignation').attr('maxlength', '50');
     });
 
@@ -751,7 +670,6 @@
           console.log("i'm from data", data)
           alert('User detail updated successfully!');
 
->>>>>>> 8a51a13188f806d94cc1d62925a338ec8a00da18
           // Update the table with the new data
           selectedRow.find('td:nth-child(2)').text(updatedName);
           selectedRow.find('td:nth-child(3)').text(updatedDepartment);
