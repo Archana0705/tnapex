@@ -622,7 +622,7 @@
       var name = sanitizeInput(selectedRow.find('td:nth-child(2)').text());
       var department = sanitizeInput(selectedRow.find('td:nth-child(3)').text());
       var designation = sanitizeInput(selectedRow.find('td:nth-child(4)').text());
-      currentImageFilename = sanitizeInput(selectedRow.find('td:nth-child(5)').text());
+      currentImageFilename = selectedRow.find('td:nth-child(5)').text();
 
       $('#editName').val(name);
       $('#editDepartment').val(department);
