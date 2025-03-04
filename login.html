@@ -1,37 +1,98 @@
 <!DOCTYPE html>
-<html class="no-js  page-9999 app-TNAPEX173136" lang="en" >
-  <head>
-    <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <meta charset="utf-8">
-    <title>TNAPEx - Log In</title>
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/app_ui/css/Core.min.css?v=23.2.1" type="text/css" />
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/app_ui/css/Theme-Standard.min.css?v=23.2.1" type="text/css" />
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/libraries/font-apex/2.2.1/css/font-apex.min.css?v=23.2.1" type="text/css" />
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/themes/theme_42/23.1/css/Core.min.css?v=23.2.1" type="text/css" />
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/custom.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/aos.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/themes/theme_42/23.1/css/Vita.min.css?v=23.2.1" type="text/css" />
-    <style type="text/css">
-      .wrap {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto auto;
-    grid-template-areas:
+<html class="no-js  page-9999 app-TNAPEX173136" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>TNAPEx - Log In</title>
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/app_ui/css/Core.min.css?v=23.2.1" type="text/css" />
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/app_ui/css/Theme-Standard.min.css?v=23.2.1"
+    type="text/css" />
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/libraries/font-apex/2.2.1/css/font-apex.min.css?v=23.2.1"
+    type="text/css" />
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/themes/theme_42/23.1/css/Core.min.css?v=23.2.1"
+    type="text/css" />
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/custom.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/aos.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="https://www.tnapex.tn.gov.in/i/themes/theme_42/23.1/css/Vita.min.css?v=23.2.1"
+    type="text/css" />
+  <link href="assets/vendor/toastr/toastr.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="../assets/vendor/datatable/css/dataTables.css" rel="stylesheet">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../assets/vendor/datatable/dataTables.bootstrap5.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <style type="text/css">
+    #P9999_CAPTCHA,
+    #P9999_CAPT_DISPLAY {
+      background-color: rgb(199, 195, 195) !important;
+      padding: 5px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .toast-container {
+      right: 0.5%;
+    }
+
+    #successToast {
+      background: #198754 !important;
+    }
+
+    #errorToast {
+      background: #ff0000 !important;
+    }
+
+
+    .captcha {
+      font-size: 22px;
+      font-style: italic;
+      font-family: cursive;
+      color: #ffffff;
+      border-radius: 2px;
+      background: url('assets/img/Captcha_bg2.png');
+      cursor: not-allowed;
+      opacity: 1;
+    }
+
+
+
+    #P9999_CAPTCHA {
+      background-color: white !important;
+    }
+
+    #P9999_CAPTCHA_CONTAINER {
+      margin-top: 10px;
+
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto auto;
+      grid-template-areas:
         "header"
         "after_header"
         "body"
         "before_footer"
         "footer";
-}
-      td[align="right"] {
+    }
+
+    td[align="right"] {
       text-align: end;
       position: absolute;
       top: -215px;
       bottom: 0;
       right: 5px;
-      }
-      .t-Button--warning {
+    }
+
+    .t-Button--warning {
       --a-button-background-color: rgb(244, 210, 20) !important;
       --a-button-text-color: #0c0a0a !important;
       --a-button-hover-background-color: #ffd45b;
@@ -41,171 +102,302 @@
       --a-button-focus-background-color: var(--a-button-hover-background-color);
       --a-button-focus-text-color: var(--a-button-hover-text-color);
       border-radius: 10px;
-      }
-      .apex-item-text, .t-Login-buttons .t-Button 
-      {
+    }
+
+    .apex-item-text,
+    .t-Login-buttons .t-Button {
       border-radius: 6px !important;
-      }
-    </style>
-    <link rel="apple-touch-icon" href="assets/img/app-icon-192.png" />
-    <link rel="icon" href="assets/img/app-icon-32.png" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="-1" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body class="t-PageBody--login t-PageTemplate--login no-anim   apex-top-nav apex-icons-fontapex apex-theme-vita"  >
-    <img class="login-img" src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/pexels-ákos-szabó-440731.jpg">
-    <div class="wrap" >
-       <div class="t-Login-bg">
-        <div class="t-Login-bgImg"></div>
+    }
+  </style>
+  <link rel="apple-touch-icon" href="assets/img/app-icon-192.png" />
+  <link rel="icon" href="assets/img/app-icon-32.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Toast -->
+  <div class="toast-container position-fixed p-3 custom_toast" x-data="transButtonComponent()">
+    <div id="errorToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="errorMessage" class="mb-0"></p>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
       </div>
-      <div class="t-Login-container">
-        <header class="t-Login-containerHeader"></header>
-        <main class="t-Login-containerBody" id="main">
-          <span id="APEX_SUCCESS_MESSAGE" data-template-id="215433090465522734_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="215433090465522734_E" class="apex-page-error u-hidden"></span>
-          <div class="container">
-            <div class="row ">
-              <div class="col col-12 apex-col-auto col-start col-end" >
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                  <tr>
-                    <td align="right"><a class="t-Button t-Button--warning&#x20;t-Button--pillStart" href="index.html"><span class="t-Button-label">Back</span></a></td>
-                  </tr>
-                </table>
-                <div class="container">
-                  <div class="row ">
-                    <div class="col col-1  col-start" ><span class="apex-grid-nbsp">&nbsp;</span></div>
-                    <div class="col col-5 apex-col-auto " >
-                      <div class="login-title">
-                        <h1>Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)</h1>
-                        <h2>தமிழ்நாடு உணவு பதப்படுத்துதல் மற்றும் வேளாண் ஏற்றுமதி மேம்பாட்டு கழகம்</h2>
-                      </div>
-                    </div>
-
-                    <div class="col col-6 apex-col-auto col-end" >
-                      <form id="login-form">
-  <div class="t-Login-region t-Form--stretchInputs t-Form--labelsAbove logbox">
-    <div class="t-Login-header">
-      <img class="t-Login-logo" src="r/wstnapex/136/files/static/v1410/icons/app-icon-512.png" alt="" />
-      <h2 class="t-Login-title">TNAPEx</h2>
     </div>
-
-    <div class="t-Login-body">
-      <div class="t-Form-fieldContainer apex-item-wrapper--has-placeholder apex-item-wrapper--text-field apex-item-wrapper--has-icon">
-        <div class="t-Form-inputContainer">
-          <div class="t-Form-itemWrapper">
-            <input type="text" id="username" placeholder="Username" class="text_field apex-item-text apex-item-has-icon" autocomplete="username" maxlength="100" />
-            <span class="apex-item-icon fa fa-user" aria-hidden="true"></span>
-          </div>
+    <div id="successToast" class="toast align-items-center text-bg-primary border-0 " role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p id="successMessage" class="mb-0"></p>
         </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
       </div>
-
-      <div class="t-Form-fieldContainer apex-item-wrapper--has-placeholder apex-item-wrapper--password apex-item-wrapper--has-icon">
-        <div class="t-Form-inputContainer">
-          <div class="t-Form-itemWrapper">
-            <input type="password" id="password" placeholder="Password" class="password apex-item-text apex-item-has-icon" maxlength="100" />
-            <span class="apex-item-icon fa fa-key" aria-hidden="true"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="t-Form-inputContainer col col-null">
-        <div class="t-Form-itemWrapper">
-          <div class="apex-item-single-checkbox">
-            <input type="hidden" name="P9999_REMEMBER" id="P9999_REMEMBER_HIDDENVALUE" value="N">
-            <input type="checkbox" id="P9999_REMEMBER" aria-label="Remember username" data-unchecked-value="N" value="Y">
-            <label for="P9999_REMEMBER" id="P9999_REMEMBER_LABEL" class="u-checkbox" aria-hidden="true">Remember username</label>
-          </div>
-        </div>
-        <span id="P9999_REMEMBER_error_placeholder" class="a-Form-error"></span>
-      </div> 
-
-    </div>
-
-    <div class="t-Login-buttons">
-      <button class="t-Button t-Button--hot t-Button--success" type="submit" id="signin-btn">
-        <span class="t-Button-label">Sign In</span>
-      </button>
     </div>
   </div>
-</form>
+  <!-- Toast -->
+</head>
 
+<body class="t-PageBody--login t-PageTemplate--login no-anim   apex-top-nav apex-icons-fontapex apex-theme-vita">
+  <img class="login-img"
+    src="https://www.tnapex.tn.gov.in/ords/r/wstnapex/136/files/static/v1410/pexels-ákos-szabó-440731.jpg">
+  <div class="wrap">
+    <div class="t-Login-bg">
+      <div class="t-Login-bgImg"></div>
+    </div>
+    <div class="t-Login-container">
+      <header class="t-Login-containerHeader"></header>
+      <main class="t-Login-containerBody" id="main">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="215433090465522734_S"
+          class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE"
+          data-template-id="215433090465522734_E" class="apex-page-error u-hidden"></span>
+        <div class="container">
+          <div class="row ">
+            <div class="col col-12 apex-col-auto col-start col-end">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tr>
+                  <td align="right"><a class="t-Button t-Button--warning&#x20;t-Button--pillStart"
+                      href="index.html"><span class="t-Button-label">Back</span></a></td>
+                </tr>
+              </table>
+              <div class="container">
+                <div class="row ">
+                  <div class="col col-1  col-start"><span class="apex-grid-nbsp">&nbsp;</span></div>
+                  <div class="col col-5 apex-col-auto ">
+                    <div class="login-title">
+                      <h1>Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)</h1>
+                      <h2>தமிழ்நாடு உணவு பதப்படுத்துதல் மற்றும் வேளாண் ஏற்றுமதி மேம்பாட்டு கழகம்</h2>
                     </div>
+                  </div>
 
+                  <div class="col col-6 apex-col-auto col-end">
+                    <form id="login-form">
+                      <div class="t-Login-region t-Form--stretchInputs t-Form--labelsAbove logbox">
+                        <div class="t-Login-header">
+                          <img class="t-Login-logo" src="r/wstnapex/136/files/static/v1410/icons/app-icon-512.png"
+                            alt="" />
+                          <h2 class="t-Login-title">TNAPEx</h2>
+                        </div>
 
+                        <div class="t-Login-body">
+                          <div
+                            class="t-Form-fieldContainer apex-item-wrapper--has-placeholder apex-item-wrapper--text-field apex-item-wrapper--has-icon">
+                            <div class="t-Form-inputContainer">
+                              <div class="t-Form-itemWrapper">
+                                <input type="text" id="username" placeholder="Username"
+                                  class="text_field apex-item-text apex-item-has-icon" autocomplete="username"
+                                  maxlength="100" />
+                                <span class="apex-item-icon fa fa-user" aria-hidden="true"></span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="t-Form-fieldContainer apex-item-wrapper--has-placeholder apex-item-wrapper--password apex-item-wrapper--has-icon">
+                            <div class="t-Form-inputContainer">
+                              <div class="t-Form-itemWrapper">
+                                <input type="password" id="password" placeholder="Password"
+                                  class="password apex-item-text apex-item-has-icon" maxlength="100" />
+                                <span class="apex-item-icon fa fa-key" aria-hidden="true"></span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="t-Form-fieldContainer rel-col text-middle t-Form-fieldContainer--stretchInputs apex-item-wrapper apex-item-wrapper--has-initial-value apex-item-wrapper--display-only"
+                            id="P9999_CAPT_CONTAINER">
+                            <div class="t-Form-labelContainer col col-null">
+                              <label for="P9999_CAPT" id="P9999_CAPT_LABEL" class="t-Form-label">Enter the number as
+                                shown
+                                in image:</label>
+                            </div>
+                            <div class="t-Form-inputContainer col col-null">
+                              <div class="t-Form-itemWrapper">
+                                <input type="hidden" id="P9999_CAPT" name="P9999_CAPT" value="616176">
+                                <input type="hidden" data-for="P9999_CAPT"
+                                  value="y0IxQ7No5cA2CJn5To5X0-lqMYdSgT2M2imFA1JFXLMxjumo95Y2xEB6jX3Mm1UOAlxuPuy3NIFSJj1l0P-MQQ">
+                                <span id="P9999_CAPT_DISPLAY" class="display_only apex-item-display-only capt-cha"
+                                  data-escape="true">616176</span>
+                              </div>
+                              <span id="P9999_CAPT_error_placeholder" class="a-Form-error"
+                                data-template-id="70091003022793546032_ET"></span>
+                            </div>
+                            <div
+                              class="t-Form-fieldContainer is-required rel-col t-Form-fieldContainer--stretchInputs t-Form-fieldContainer--indicatorAsterisk t-Form-fieldContainer--large apex-item-wrapper apex-item-wrapper--text-field"
+                              id="P9999_CAPTCHA_CONTAINER">
+                              <div class="t-Form-inputContainer col col-null">
+
+                                <div class="t-Form-itemWrapper">
+                                  <input type="text" id="P9999_CAPTCHA" name="P9999_CAPTCHA" required
+                                    class="text_field apex-item-text" value="" size="30" placeholder="Enter Captcha" />
+                                </div>
+                                <div class="t-Form-itemAssistance">
+                                  <span id="P9999_CAPTCHA_error_placeholder" class="a-Form-error"
+                                    data-template-id="70091003340642546032_ET"></span>
+                                  <div class="t-Form-itemRequired" aria-hidden="true">Required</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="t-Form-inputContainer col col-null">
+                              <div class="t-Form-itemWrapper">
+                                <div class="apex-item-single-checkbox">
+                                  <input type="hidden" name="P9999_REMEMBER" id="P9999_REMEMBER_HIDDENVALUE" value="N">
+                                  <input type="checkbox" id="P9999_REMEMBER" aria-label="Remember username"
+                                    data-unchecked-value="N" value="Y">
+                                  <label for="P9999_REMEMBER" id="P9999_REMEMBER_LABEL" class="u-checkbox"
+                                    aria-hidden="true">Remember username</label>
+                                </div>
+                              </div>
+                              <span id="P9999_REMEMBER_error_placeholder" class="a-Form-error"></span>
+                            </div>
+
+                          </div>
+
+                          <div class="t-Login-buttons">
+                            <button class="t-Button t-Button--hot t-Button--success" type="submit" id="signin-btn">
+                              <span class="t-Button-label">Sign In</span>
+                            </button>
+                          </div>
+                        </div>
+                    </form>
 
                   </div>
+
+
+
                 </div>
               </div>
             </div>
           </div>
-        </main>
-        <footer class="t-Login-containerFooter"></footer>
-      </div>
-      
+        </div>
+      </main>
+      <footer class="t-Login-containerFooter"></footer>
     </div>
 
-    <script src="https://www.tnapex.tn.gov.in/i/libraries/apex/minified/desktop_all.min.js?v=23.2.1"></script>
-    <script src="wwv_flow.js_messages?p_app_id=136&p_lang=en&p_version=23.2.1-201478425"></script>
+  </div>
 
-    <script src="https://www.tnapex.tn.gov.in/i/libraries/apex/minified/widget.stickyWidget.min.js?v=23.2.1"></script>
-    <script src="https://www.tnapex.tn.gov.in/i/themes/theme_42/23.1/js/theme42.min.js?v=23.2.1"></script>
-   
-    <script>
-  $(document).ready(function () {
-    // Check if 'Remember username' is set in localStorage and pre-fill the form
-    if (localStorage.getItem('rememberUsername') === 'true') {
-      $('#P9999_REMEMBER').prop('checked', true); // Check the checkbox
-      $('#username').val(localStorage.getItem('username')); // Pre-fill username
-      $('#password').val(localStorage.getItem('password')); // Pre-fill password
+  <script src="https://www.tnapex.tn.gov.in/i/libraries/apex/minified/desktop_all.min.js?v=23.2.1"></script>
+  <script src="wwv_flow.js_messages?p_app_id=136&p_lang=en&p_version=23.2.1-201478425"></script>
+
+  <script src="https://www.tnapex.tn.gov.in/i/libraries/apex/minified/widget.stickyWidget.min.js?v=23.2.1"></script>
+  <script src="https://www.tnapex.tn.gov.in/i/themes/theme_42/23.1/js/theme42.min.js?v=23.2.1"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function generateCaptcha(length) {
+      var characters = '0123456789';
+      var captcha = '';
+      for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length);
+        captcha += characters.charAt(randomIndex);
+      }
+      return captcha;
     }
 
-    // Handle form submission
-    $('#login-form').on('submit', async function (e) {
-      e.preventDefault(); // Prevent form submission
+    function showSuccessToast(message) {
+      const toastElement = document.getElementById('successToast');
+      const toastBody = document.getElementById('successMessage');
 
-      const username = $('#username').val();
-      const password = $('#password').val();
-      const rememberUsername = $('#P9999_REMEMBER').is(':checked'); // Check if the checkbox is checked
+      // Set the dynamic message
+      toastBody.textContent = message;
 
-      try {
-        const response = await fetch('http://192.168.5.247:2208/auth/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password })
-        });
+      // Initialize and show the toast
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
+    // Function to show a error toast with a dynamic message
+    function showErrorToast(message) {
+      const toastElement = document.getElementById('errorToast');
+      const toastBody = document.getElementById('errorMessage');
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+      // Set the dynamic message
+      toastBody.textContent = message;
 
-        const data = await response.json();
-        localStorage.setItem('token', data.token); // Store token
+      // Initialize and show the toast
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      toast.show();
+    }
 
-        if (rememberUsername) {
-          // If checkbox is checked, store username and password
-          localStorage.setItem('rememberUsername', 'true');
-          localStorage.setItem('username', username);
-          localStorage.setItem('password', password);
-        } else {
-          // If unchecked, clear stored username and password
-          localStorage.removeItem('rememberUsername');
-          localStorage.removeItem('username');
-          localStorage.removeItem('password');
-        }
 
-        window.location.href = 'department-picture-report-data.html'; // Redirect after successful login
-      } catch (error) {
-        alert('Login failed. Please check your credentials.');
-        console.error('Error:', error);
+    var generatedCaptcha = generateCaptcha(6);  // Generate a 6-character CAPTCHA
+    document.getElementById('P9999_CAPT').value = generatedCaptcha;  // Store the correct CAPTCHA value in the hidden field
+    document.getElementById('P9999_CAPT_DISPLAY').textContent = generatedCaptcha;  // Display the CAPTCHA for the user
+    // Function to show a success toast with a dynamic message
+    $(document).ready(function () {
+      // Check if 'Remember username' is set in localStorage and pre-fill the form
+      if (localStorage.getItem('rememberUsername') === 'true') {
+        $('#P9999_REMEMBER').prop('checked', true); // Check the checkbox
+        $('#username').val(localStorage.getItem('username')); // Pre-fill username
+        $('#password').val(localStorage.getItem('password')); // Pre-fill password
       }
+
+      // Handle form submission
+      $('#login-form').on('submit', async function (e) {
+        e.preventDefault(); // Prevent form submission
+        let captchaVal = $('#P9999_CAPTCHA').val();
+
+        if (!captchaVal) {
+          showErrorToast('Please fill all the Required fields');
+          return
+        }
+
+        var correctCaptcha = $('#P9999_CAPT').val(); // Get the correct CAPTCHA value from the hidden input
+        if (captchaVal !== correctCaptcha) {
+          errors = true;
+          showErrorToast('Captcha does not match. Please try again.');
+          return
+        }
+        const username = $('#username').val();
+        const password = $('#password').val();
+        const rememberUsername = $('#P9999_REMEMBER').is(':checked'); // Check if the checkbox is checked
+
+        try {
+          const response = await fetch('http://192.168.5.247:2208/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const data = await response.json();
+          localStorage.setItem('token', data.token); // Store token
+
+          if (rememberUsername) {
+            // If checkbox is checked, store username and password
+            localStorage.setItem('rememberUsername', 'true');
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+          } else {
+            // If unchecked, clear stored username and password
+            localStorage.removeItem('rememberUsername');
+            localStorage.removeItem('username');
+            localStorage.removeItem('password');
+          }
+
+          window.location.href = 'department-picture-report-data.html'; // Redirect after successful login
+        } catch (error) {
+          alert('Login failed. Please check your credentials.');
+          console.error('Error:', error);
+        }
+      });
     });
-  });
-</script>
+  </script>
 
 
-    <!-- <script>
+  <!-- <script>
       document.getElementById('login-form').addEventListener('submit', async function (e) {
     e.preventDefault(); // Prevent form submission
 
@@ -234,7 +426,7 @@
 
       
     </script> -->
-   <!--  <script>
+  <!--  <script>
   window.onload = () => {
       const token = localStorage.getItem('token');
       if (token) {
@@ -247,16 +439,17 @@
   };
 </script> -->
 
-<script type="text/javascript">
-$(document).ready(function () {
-  const token = localStorage.getItem('token');
-  
-  // If a token exists, redirect to the dashboard
-  if (token) {
-    window.location.href = 'department-picture-report-data.html';  // Replace 'dashboard.html' with the actual dashboard page URL
-  }
-});
+  <script type="text/javascript">
+    $(document).ready(function () {
+      const token = localStorage.getItem('token');
 
-</script>
-  </body>
+      // If a token exists, redirect to the dashboard
+      if (token) {
+        window.location.href = 'department-picture-report-data.html';  // Replace 'dashboard.html' with the actual dashboard page URL
+      }
+    });
+
+  </script>
+</body>
+
 </html>
