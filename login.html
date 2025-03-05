@@ -343,6 +343,7 @@
     document.getElementById('P9999_CAPT_DISPLAY').textContent = generatedCaptcha;
 
     $(document).ready(function () {
+      debugger;
       if (localStorage.getItem('rememberUsername') === 'true') {
         $('#P9999_REMEMBER').prop('checked', true);
         $('#username').val(localStorage.getItem('username'));
@@ -351,6 +352,7 @@
 
       // Handle form submission
       $('#login-form').on('submit', async function (e) {
+        debugger;
         e.preventDefault(); // Prevent form submission
         let captchaVal = $('#P9999_CAPTCHA').val();
 
@@ -382,6 +384,15 @@
 
           const data = await response.json();
           localStorage.setItem('token', data.token); // Store token
+          sessionStorage.setItem('token', data.token);
+
+          window.addEventListener("storage", function (event) {
+            if (event.key === "token" && event.newValue === null) {
+              alert("You have been logged out from another session.");
+              sessionStorage.removeItem("token");
+              location.reload();
+            }
+          });
 
           if (rememberUsername) {
             // If checkbox is checked, store username and password
@@ -448,14 +459,14 @@
 </script> -->
 
   <script type="text/javascript">
-    $(document).ready(function () {
-      const token = localStorage.getItem('token');
+    // $(document).ready(function () {
+    //   const token = localStorage.getItem('token');
 
-      // If a token exists, redirect to the dashboard
-      if (token) {
-        window.location.href = 'department-picture-report-data.html';  // Replace 'dashboard.html' with the actual dashboard page URL
-      }
-    });
+    //   // If a token exists, redirect to the dashboard
+    //   if (token) {
+    //     window.location.href = 'department-picture-report-data.html';  // Replace 'dashboard.html' with the actual dashboard page URL
+    //   }
+    // });
 
   </script>
 </body>
