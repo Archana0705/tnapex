@@ -463,13 +463,14 @@
             </div>
             <div class="creds">
               <label class="form-label" for="password">Password</label>
-              <input type="password" id="password" placeholder="Password" class="creds form-control" required><br><br>
+              <input type="password" id="password" placeholder="Password" class="creds form-control" required>
+              <small id="passwordError">Password must be at least 8 characters, contain uppercase, lowercase, a number,
+                and a special character.</small>
             </div>
+            <br />
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             <button class="btn btn-danger" type="submit" id="signin-btn">Create</button>
           </form>
-
-
         </div>
 
       </div>
@@ -903,6 +904,50 @@
   </script>
   <!-- new user -->
   <script>
+    function validatePassword(password) {
+      const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      return passwordPattern.test(password);
+    }
+
+    $(document).ready(function () {
+      $('#password').on('keyup', function () {
+        const isValid = validatePassword($(this).val());
+        if (isValid) {
+          $('#passwordError').hide();
+          $('#signin-btn').prop('disabled', false).css({ opacity: 1, cursor: "pointer" });
+        } else {
+          $('#passwordError').show();
+          $('#signin-btn').prop('disabled', true).css({ opacity: 0.6, cursor: "not-allowed" });
+        }
+      });
+    });
+  </script>
+
+  <!-- new user -->
+  <script>
+    const sanitizeUserNameInput = (input) => {
+      if (typeof input !== "string") return input;
+      input = input.trim();
+      input = input.replace(/<[^>]*>/g, "");
+      input = input.replace(/(javascript:|data:|vbscript:)/gi, "");
+      input = input.replace(/on\w+="[^"]*"/gi, "");
+      input = input.replace(/[^a-zA-Z0-9\s.,\-']/g, "");
+
+      return input;
+    };
+
+    $(document).ready(function () {
+      function restrictInput(selector, regex) {
+        $(selector).on('input', function () {
+          let sanitizedValue = $(this).val().replace(regex, '');
+          $(this).val(sanitizedValue);
+        });
+      }
+      restrictInput('#username', /[^a-zA-Z0-9\s.,\-']/g);
+
+      $('#username').attr('maxlength', '50');
+    });
+
 
     const loginForm = document.getElementById('new-login-form');
 
