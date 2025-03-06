@@ -433,16 +433,39 @@
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+
+      const sanitizeInput = (input) => {
+        if (typeof input !== "string") return input;
+        input = input.trim();
+        input = input.replace(/<[^>]*>/g, "");
+        input = input.replace(/(javascript:|data:|vbscript:)/gi, "");
+        input = input.replace(/on\w+="[^"]*"/gi, "");
+        input = input.replace(/[^a-zA-Z0-9\s.,\-']/g, "");
+        return input;
+      };
+
+      $(document).ready(function () {
+        function restrictInput(selector, regex) {
+          $(selector).on('input', function () {
+            let sanitizedValue = $(this).val().replace(regex, '');
+            $(this).val(sanitizedValue);
+          });
+        }
+        restrictInput('#name, #department, #designation', /[^a-zA-Z0-9\s.\-']/g);
+        $('#name, #department, #designation').attr('maxlength', '50');
+      });
+
       const imageUploadForm = document.getElementById('image-upload-form');
 
       imageUploadForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const token = localStorage.getItem('token');
-        const name = document.getElementById('name').value;
-        const department = document.getElementById('department').value;
-        const designation = document.getElementById('designation').value;
-        const imageFile = document.getElementById('imageUpload').files[0];
+        const name = sanitizeInput(document.getElementById('name').value);
+        const department = sanitizeInput(document.getElementById('department').value);
+        const designation = sanitizeInput(document.getElementById('designation').value);
+        const imageFile = document.getElementById('image').files[0];
+
 
         // if (!imageFile || !imageFile.type.startsWith('image/')) {
         //   alert('Please upload a valid image file.');
